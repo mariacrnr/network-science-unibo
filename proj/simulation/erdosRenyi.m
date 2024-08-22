@@ -10,7 +10,7 @@ function G = erdosRenyi(N, p, minW, maxW)
     % Generate edges with probability p and assign random initial weights
     for i = 1:N
         for j = (i+1):N
-            if rand() < p
+            if rand() <= p
                 % Edge exists
                 weight = rand() * (maxW - minW) + minW;
                 G(i, j) = weight;
